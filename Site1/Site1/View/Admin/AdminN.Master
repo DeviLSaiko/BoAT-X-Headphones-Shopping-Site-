@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminN.master.cs" Inherits="Site1.View.Admin.AdminN" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width , intial-scale=1" />
+   
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../Assets/BS3/bootstrap.min.js"></script>
+
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body {
+             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif';
+        }
+
+        header {
+            background-color: #000000;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            font-size:x-large;
+        }
+
+        nav {
+            float: left;
+            width: 20%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                color:white;
+                display: block;
+            }
+
+                nav ul li:hover {
+                    padding: 11px;
+                    background-color: #000000;
+                    color:#ffffff;
+
+                }
+
+        article {
+            float: left;
+            background-color:#ffffff ;
+            padding: 30px;
+            width: 80%;
+         
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #000000;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        navbar-inverse
+        {
+            color:azure;
+        }
+
+        @(max-width:600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+                color:white;
+            }
+        }
+    </style>
+       
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <header>BoAt-X</header>
+            <section>
+                <nav class="">
+                    <ul>
+                        <li><a href="AddCategory.aspx"  >Category</a></li>
+                        <li><a href="AddItem.aspx">Item</a></li>
+                        <li><a href="AddQuantity.aspx">Quantity</a></li>
+                        <li><a href="#">Order</a></li>
+                        <li><a href="#">View Payment</a></li>
+                        <li><a href="Reports.aspx">Reports</a></li>
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="Admin_Login.aspx">Logout</a></li>
+                    </ul>
+                </nav>
+                <article>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </article>
+            </section>
+             <footer class="container-fluid text-center jumbotron">
+            <p style="font-size:small"> 2022 @ Copyright Reserved | BoAt-X inc.. </p>
+            <p style="font-size:smaller">Developed And Maintained By IyAppAn</p>
+        </footer>
+        </div>
+    </form>
+</body>
+</html>

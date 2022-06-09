@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminN.master.cs" Inherits="Site1.View.Admin.AdminN" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width , intial-scale=1" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../Assets/BS3/bootstrap.min.js"></script>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lao UI';
+        }
+
+        header {
+            background-color: #ffd800;
+            padding: 10px;
+            text-align: center;
+            color:black;
+            font-size: medium;
+        }
+
+        nav ul li:hover {
+            padding: 1px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        article {
+            float: none;
+            background-color: white;
+            padding: 30px;
+            width: 80%;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color:black;
+            text-align: center;
+            color: white;
+        }
+
+        navbar-inverse {
+            color: azure;
+        }
+
+        @(max-width:600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+                color: white;
+            }
+        }
+    </style>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+
+            <header>BoAt-X Admin Panel </header>
+            <section>
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li ><a href="#">DashBoard</a></li>
+                                <li><a href="AddCategory.aspx">Category</a></li>
+                                <li><a href="AddItem.aspx">Item</a></li>
+                                <li><a href="AddQuantity.aspx">Quantity</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">View Payment</a></li>
+                                <li><a href="Reports.aspx">Reports</a></li>
+                                <li><a href="#">Change Password</a></li>
+                                <li><a href="#">Feedback</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                               <li><a href="Admin_Login.aspx"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <article>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </article>
+            </section>
+            <div class="container-fluid text-center jumbotron" style="margin-bottom:0; background-color:black; color:white">
+               <p style="font-size:medium">2022 @ Copyright Reserved | BoAt-X inc.. </p>
+               <p style="font-size: small">Developed And Maintained By IyAppAn</p>
+            </div>
+            <footer ">
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
